@@ -5,7 +5,7 @@ create table Tipo ( /* do produto */
 
 create table Produto (
     codigo number(5, 0), /* PK */
-    nome varchar2(32),
+    nome varchar2(128),
     tipo number(5, 0) /* FK para Tipo.codigo */
 );
 
