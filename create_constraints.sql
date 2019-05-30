@@ -25,4 +25,3 @@ alter table Ocorrencia
     add constraint pkOcorrencia primary key (codigo)
     add constraint fkTecnicoOcorrencia foreign key (tecnico) references Tecnico
     add constraint fkSolicitacaoOcorrencia foreign key (solicitacao) references Solicitacao;
-
