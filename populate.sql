@@ -1,9 +1,5 @@
-/* Clientes */
-insert into Cliente (codigo, nome) values (1, 'Merry Lucien');
-insert into Cliente (codigo, nome) values (2, 'João Hallib');
-insert into Cliente (codigo, nome) values (3, 'Cecília Genick');
-insert into Cliente (codigo, nome) values (4, 'Rebe Kinsle');
-insert into Cliente (codigo, nome) values (5, 'Wilbur Ledes');
+/* 64 Clientes */
+@@ insert_clients;
 
 /* Tipos */
 insert into Tipo (codigo, descricao) values (1, 'impressora');
@@ -44,3 +40,24 @@ insert into Produto (codigo, nome, tipo) values (17, 'AOC LED 185 Widescreen VGA
 /* audio */
 insert into Produto (codigo, nome, tipo) values (18, 'ALTO-FALANTES LOGITECH Z120 - a7271767 - a7271767', 5);
 insert into Produto (codigo, nome, tipo) values (19, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Preta SP 301BK', 5);
+
+/* 9 Técnicos */
+insert into Tecnico (codigo, nome) values (1, 'Maria Angélica');
+insert into Tecnico (codigo, nome) values (2, 'César Munari');
+insert into Tecnico (codigo, nome) values (3, 'Jefferson Blaitt');
+insert into Tecnico (codigo, nome) values (4, 'Carolina Camargo');
+insert into Tecnico (codigo, nome) values (5, 'Tadeu Maffeis');
+insert into Tecnico (codigo, nome) values (6, 'Dimas Cardoso');
+insert into Tecnico (codigo, nome) values (7, 'Sérgio Bernardo');
+insert into Tecnico (codigo, nome) values (8, 'Fernando Miranda');
+insert into Tecnico (codigo, nome) values (9, 'Paulo Edson Alves');
+
+/* Categoria */
+insert into Categoria (codigo, descricao, precohora) values (1, 'Software', 20.5);
+insert into Categoria (codigo, descricao, precohora) values (2, 'Hardware', 15.9);
+
+/* 128 Solicitações */
+@@ insert_solicitacoes;
+
+/* 512 Ocorrências */
+@@ insert_ocorrencias;

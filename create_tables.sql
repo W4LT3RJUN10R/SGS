@@ -30,7 +30,7 @@ create table Ocorrencia (
     solicitacao number(5, 0), /* FK para Solicitacao.codigo */
     tecnico number(5, 0), /* FK para Tecnico.codigo */
     dia date,
-    descricao varchar2(128),
+    descricao varchar2(512),
     duracao number(3)
 );
 
@@ -41,5 +41,5 @@ create table Solicitacao (
     cliente number(5, 0), /* FK para Cliente.codigo */
     dia date,
     custoTotal number(8, 2), /* 999999.99 */
-    situacao varchar2(1) /* 1 | 2 | 3 = não atendida | aguardando peças | atendida */
+    situacao number(1) /* 1 | 2 | 3 = não atendida | aguardando peças | atendida */
 );
