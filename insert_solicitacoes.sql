@@ -2,13 +2,13 @@ insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, s
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (2, 13, 1, 49, '6/1/2019', 0, 1);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (3, 9, 1, 1, '9/3/2019', 0, 2);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (4, 10, 2, 38, '6/2/2019', 0, 1);
-insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (5, 15, 1, 6, '25/4/2019', 0, 1);
-insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (6, 12, 2, 1, '9/7/2018', 0, 1);
+insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (5, 15, 1, 6, '25/6/2019', 0, 1);
+insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (6, 19, 2, 1, '9/7/2018', 0, 1);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (7, 19, 1, 59, '18/10/2018', 0, 1);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (8, 11, 2, 1, '22/1/2019', 0, 1);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (9, 5, 1, 31, '28/6/2018', 0, 2);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (10, 17, 2, 52, '2/1/2019', 0, 3);
-insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (11, 6, 2, 6, '1/3/2019', 0, 2);
+insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (11, 6, 2, 6, '1/6/2019', 0, 2);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (12, 12, 2, 30, '6/6/2018', 0, 3);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (13, 14, 1, 60, '22/4/2019', 0, 2);
 insert into Solicitacao (codigo, produto, categoria, cliente, dia, custototal, situacao) values (14, 7, 1, 10, '9/6/2018', 0, 1);
