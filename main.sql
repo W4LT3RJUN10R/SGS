@@ -4,5 +4,5 @@
 @@ populate;
 -- @@ 4.1;
 @@ ./exercicios/4.2.sql;
--- @@ ./exercicios/4.3.sql;
+@@ ./exercicios/4.3.sql;
 commit;
