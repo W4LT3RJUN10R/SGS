@@ -40,8 +40,9 @@ insert into Produto (codigo, nome, tipo) values (17, 'AOC LED 185 Widescreen VGA
 /* audio */
 insert into Produto (codigo, nome, tipo) values (18, 'ALTO-FALANTES LOGITECH Z120 - a7271767 - a7271767', 5);
 insert into Produto (codigo, nome, tipo) values (19, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Preta SP 301BK', 5);
+insert into Produto (codigo, nome, tipo) values (20, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Branca SP 301WH', 5);
 
-/* 9 Técnicos */
+/* 10 Técnicos */
 insert into Tecnico (codigo, nome) values (1, 'Maria Angélica');
 insert into Tecnico (codigo, nome) values (2, 'César Munari');
 insert into Tecnico (codigo, nome) values (3, 'Jefferson Blaitt');
@@ -51,6 +52,7 @@ insert into Tecnico (codigo, nome) values (6, 'Dimas Cardoso');
 insert into Tecnico (codigo, nome) values (7, 'Sérgio Bernardo');
 insert into Tecnico (codigo, nome) values (8, 'Fernando Miranda');
 insert into Tecnico (codigo, nome) values (9, 'Paulo Edson Alves');
+insert into Tecnico (codigo, nome) values (10, 'Tony Stark');
 
 /* Categoria */
 insert into Categoria (codigo, descricao, precohora) values (1, 'Software', 20.5);

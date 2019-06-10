@@ -510,3 +510,4 @@ insert into Ocorrencia (codigo, solicitacao, tecnico, dia, descricao, duracao) v
 insert into Ocorrencia (codigo, solicitacao, tecnico, dia, descricao, duracao) values (510, 34, 5, '30/6/2018', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 12);
 insert into Ocorrencia (codigo, solicitacao, tecnico, dia, descricao, duracao) values (511, 54, 5, '18/6/2018', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 14);
 insert into Ocorrencia (codigo, solicitacao, tecnico, dia, descricao, duracao) values (512, 14, 2, '27/6/2018', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', 12);
+insert into Ocorrencia (codigo, solicitacao, tecnico, dia, descricao, duracao) values (513, 11, 10, '27/6/2018', 'Can Jarvis solve it?', 1);
