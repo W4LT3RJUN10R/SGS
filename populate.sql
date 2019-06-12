@@ -55,8 +55,8 @@ insert into Tecnico (codigo, nome) values (9, 'Paulo Edson Alves');
 insert into Tecnico (codigo, nome) values (10, 'Tony Stark');
 
 /* Categoria */
-insert into Categoria (codigo, descricao, precohora) values (1, 'Software', 20.5);
-insert into Categoria (codigo, descricao, precohora) values (2, 'Hardware', 15.9);
+insert into Categoria (codigo, descricao, precohora) values (1, 'Software', 30.0);
+insert into Categoria (codigo, descricao, precohora) values (2, 'Hardware', 20.0);
 
 /* 128 Solicitações */
 @@ insert_solicitacoes;
