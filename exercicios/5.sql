@@ -3,26 +3,21 @@
 */
 
 /*
-A função abaixo recebe o código de uma solicitação e:
-1) consulta o preço por hora da categoria de problema associada à solicitação, guardando este valor na variável preco;
-2) consulta o somatório das durações das ocorrências associadas à solicitação, guardando o total na variável duracaoTotal;
-3) retorna o produto destes dois números.
-
-A função é útil para determinar o custo total de uma solicitação.
+A função abaixo recebe o código de um produto e, através da junção das tabelas Solicitacao e Ocorrencia, calcula a média de duração das ocorrências para aquele produto. Isso pode ser útil para prever, com base em ocorrências passadas, quanto tempo uma nova ocorrência pode levar.
 */
 
-CREATE OR REPLACE FUNCTION calcularCustoTotal(s IN Solicitacao.codigo%TYPE)
+CREATE OR REPLACE FUNCTION tempoMedioDeOcorrenciaPorProduto(p IN Produto.codigo%TYPE)
 RETURN NUMBER
 AS
-preco NUMBER(11, 2);
-duracaoTotal NUMBER(11, 2);
+duracaoMedia NUMBER;
 BEGIN
-    SELECT precoHora INTO preco FROM Categoria WHERE codigo = (
-        SELECT categoria FROM Solicitacao WHERE codigo = s
-    );
+    SELECT AVG(duracao) INTO duracaoMedia FROM Solicitacao INNER JOIN Ocorrencia
+    ON Ocorrencia.solicitacao = Solicitacao.codigo
+    WHERE produto = p;
 
-    SELECT SUM(duracao) INTO duracaoTotal FROM Ocorrencia WHERE solicitacao = s;
-
-    RETURN preco*duracaoTotal;
-END;
+    RETURN duracaoMedia;
+END tempoMedioDeOcorrenciaPorProduto;
 /
+
+/* TESTE: produto 1 -> 26,2608696 */
+SELECT tempoMedioDeOcorrenciaPorProduto(1) FROM Dual;
