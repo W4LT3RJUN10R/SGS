@@ -1,4 +1,4 @@
-Pense algebricamente:
+Pense algebricamente (e não algoritmicamente):
     1) quais as tabelas necessárias na consulta?
     2) Quais as equações de junção requeridas para que apenas as linhas relacionadas sejam preservadas no resultado
     3) Quais os filtros complementares necessários na cláusula WHERE para que as linhas desejadas sejam consideradas?
@@ -6,6 +6,10 @@ Pense algebricamente:
     5) Precisa filtra os grupos na cláusula HAVING?
     6) Quais colunas precisam ser projetadas?
     7) Alguma ordenação é requerida?
+
+SELECT com ORDER BY: projeção só pode ter a coluna usada pelo GROUP BY e resultados de funções agregadoras.
+
+WHERE não pode ter funções de agregação.
 
 Ordem de execução:
     SELECT <-5
