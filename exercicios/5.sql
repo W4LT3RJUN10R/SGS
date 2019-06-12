@@ -15,14 +15,14 @@ CREATE OR REPLACE FUNCTION calcularCustoTotal(s IN Solicitacao.codigo%TYPE)
 RETURN NUMBER
 AS
 preco NUMBER(11, 2);
-ducaraoTotal NUMBER(11, 2);
+duracaoTotal NUMBER(11, 2);
 BEGIN
     SELECT precoHora INTO preco FROM Categoria WHERE codigo = (
         SELECT categoria FROM Solicitacao WHERE codigo = s
     );
 
-    SELECT SUM(duracao) INTO ducaraoTotal FROM Ocorrencia WHERE solicitacao = s;
+    SELECT SUM(duracao) INTO duracaoTotal FROM Ocorrencia WHERE solicitacao = s;
 
-    RETURN preco*ducaraoTotal;
+    RETURN preco*duracaoTotal;
 END;
 /
