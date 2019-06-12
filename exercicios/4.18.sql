@@ -1,9 +1,5 @@
 /*
-4.18 Dê exemplo de uma consulta utilizando a cláusula MINUS
-*/
-
-/*
-A consulta abaixo apresenta os códigos das solicitações do cliente 5 que não dizem respeito ao produto 19. No dataset deste trabalho, há 5 solicitações do cliente 5 e 12 solicitações para o produto 19. Com a cláusula MINUS, podemos eliminar do resultado a interceção entre esses dois conjuntos.
+    A consulta abaixo apresenta os códigos das solicitações do cliente 5 que não dizem respeito ao produto 19. No dataset deste trabalho, há 5 solicitações do cliente 5 e 12 solicitações para o produto 19. Com a cláusula MINUS, podemos eliminar do resultado a interceção entre esses dois conjuntos.
 */
 
 SELECT * FROM (

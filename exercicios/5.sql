@@ -1,9 +1,9 @@
 /*
-5-Escreva uma função que seja útil para a lógica de negócios de seu sistema e indique o contexto de sua utilização.
+    5) Escreva uma função que seja útil para a lógica de negócios de seu sistema e indique o contexto de sua utilização.
 */
 
 /*
-A função abaixo recebe o código de um produto e, através da junção das tabelas Solicitacao e Ocorrencia, calcula a média de duração das ocorrências para aquele produto. Isso pode ser útil para prever, com base em ocorrências passadas, quanto tempo uma nova ocorrência pode levar.
+    A função abaixo recebe o código de um produto e, através da junção das tabelas Solicitacao e Ocorrencia, calcula a média de duração das ocorrências para aquele produto. Isso pode ser útil para prever, com base em ocorrências passadas, quanto tempo uma nova ocorrência pode levar.
 */
 
 CREATE OR REPLACE FUNCTION tempoMedioDeOcorrenciaPorProduto(p IN Produto.codigo%TYPE)

@@ -1,5 +1,5 @@
 /*
-7- Escreva um trigger que ao excluir uma solicitação exclua também as suas ocorrências.
+    7) Escreva um trigger que ao excluir uma solicitação exclua também as suas ocorrências.
 */
 
 CREATE OR REPLACE TRIGGER excluirOcorrenciasDependentes
@@ -11,7 +11,7 @@ END excluirOcorrenciasDependentes;
 /
 
 /* TESTE
-A solicitação 50 tem 8 ocorrências. Zero devem existir após sua exclusão.
+    A solicitação 50 tem 8 ocorrências. Zero devem existir após sua exclusão.
 PASSANDO */
 SELECT COUNT(*) FROM Ocorrencia WHERE Ocorrencia.solicitacao = 50; /* 8 */
 DELETE FROM Solicitacao WHERE codigo = 50;

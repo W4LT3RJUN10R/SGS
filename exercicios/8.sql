@@ -1,10 +1,10 @@
 /*
-8- Escreva uma procedure que calcule o custo de uma manutenção. Esta procedure deve receber como parâmetro o código da Solicitação e somar as horas de todas as ocorrências realizadas para esta solicitação. Considerar que a unidade é sempre horas inteiras (desconsiderar minutos). O custo base é
+    8) Escreva uma procedure que calcule o custo de uma manutenção. Esta procedure deve receber como parâmetro o código da Solicitação e somar as horas de todas as ocorrências realizadas para esta solicitação. Considerar que a unidade é sempre horas inteiras (desconsiderar minutos). O custo base é
 
-se  tipoProd = ´HW´     custo = r$20,00 por hora
-    tipoProd = ´SW´     custo = r$30,00 por hora
+    se  tipoProd = ´HW´     custo = r$20,00 por hora
+        tipoProd = ´SW´     custo = r$30,00 por hora
 
-O custo total não pode ser menor do que o preço mínimo para a categoria.
+    O custo total não pode ser menor do que o preço mínimo para a categoria.
 */
 
 CREATE OR REPLACE PROCEDURE custoManutencao(pCod Solicitacao.codigo%TYPE)

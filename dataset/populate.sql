@@ -2,61 +2,81 @@
 @@ insert_clients;
 
 /* Tipos */
-insert into Tipo (codigo, descricao) values (1, 'impressora');
-insert into Tipo (codigo, descricao) values (2, 'cabo');
-insert into Tipo (codigo, descricao) values (3, 'teclado');
-insert into Tipo (codigo, descricao) values (4, 'monitor');
-insert into Tipo (codigo, descricao) values (5, 'áudio');
-insert into Tipo (codigo, descricao) values (6, 'mouse');
+INSERT INTO Tipo (codigo, descricao) VALUES (1, 'impressora');
+INSERT INTO Tipo (codigo, descricao) VALUES (2, 'cabo');
+INSERT INTO Tipo (codigo, descricao) VALUES (3, 'teclado');
+INSERT INTO Tipo (codigo, descricao) VALUES (4, 'monitor');
+INSERT INTO Tipo (codigo, descricao) VALUES (5, 'áudio');
+INSERT INTO Tipo (codigo, descricao) VALUES (6, 'mouse');
 
 /* Produtos */
 /* mice */
-insert into Produto (codigo, nome, tipo) values (1, 'LOGITECH M117', 6);
-insert into Produto (codigo, nome, tipo) values (2, 'LOGITECH MX Vertical Advanced Ergonomic Mouse', 6);
-insert into Produto (codigo, nome, tipo) values (3, 'LOGITECH MX Master 2S', 6);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    1, 'LOGITECH M117', 6);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    2, 'LOGITECH MX Vertical Advanced Ergonomic Mouse', 6);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    3, 'LOGITECH MX Master 2S', 6);
 
 /* keyboards */
-insert into Produto (codigo, nome, tipo) values (4, 'LOGITECH CRAFT Advanced Keyboard with Creative Input Dial', 3);
-insert into Produto (codigo, nome, tipo) values (5, 'LOGITECH Wireless Illuminated Keyboard K800 Hand-proximity backlight', 3);
-insert into Produto (codigo, nome, tipo) values (6, 'LOGITECH Bluetooth Illuminated Keyboard K810 Easy-Switch multi-device keyboard', 3);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    4, 'LOGITECH CRAFT Advanced Keyboard with Creative Input Dial', 3);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    5, 'LOGITECH Wireless Illuminated Keyboard K800 Hand-proximity backlight', 3);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    6, 'LOGITECH Bluetooth Illuminated Keyboard K810 Easy-Switch multi-device keyboard', 3);
 
 /* printers */
-insert into Produto (codigo, nome, tipo) values (7, 'Canon Pro 1000 imagePROGRAF', 1);
-insert into Produto (codigo, nome, tipo) values (8, 'HP Ink Tank 116 Jato de Tinta Colorida Bivolt 3UM87A', 1);
-insert into Produto (codigo, nome, tipo) values (9, 'Plotter - Yes Printer Modelo 1801w Cabeça Xp600', 1);
-insert into Produto (codigo, nome, tipo) values (10, 'Termica Jly-58 58mm Tickts Pc', 1);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    7, 'Canon Pro 1000 imagePROGRAF', 1);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    8, 'HP Ink Tank 116 Jato de Tinta Colorida Bivolt 3UM87A', 1);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    9, 'Plotter - Yes Printer Modelo 1801w Cabeça Xp600', 1);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    10, 'Termica Jly-58 58mm Tickts Pc', 1);
 
 /* cables */
-insert into Produto (codigo, nome, tipo) values (11, 'Ethernet 20 Metros', 2);
-insert into Produto (codigo, nome, tipo) values (12, 'Coaxial para Antena RG6 - 75OHMS', 2);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    11, 'Ethernet 20 Metros', 2);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    12, 'Coaxial para Antena RG6 - 75OHMS', 2);
 
-/* monitor */
-insert into Produto (codigo, nome, tipo) values (13, 'LG LED 238 Widescreen Full HD IPS HDMI 24MK430H', 4);
-insert into Produto (codigo, nome, tipo) values (14, 'Dell de 21.5” P2219H (somente painel) - 210-arxl - 210-arxl', 4);
-insert into Produto (codigo, nome, tipo) values (15, 'LG 19,5" Led - 20M37Aa', 4);
-insert into Produto (codigo, nome, tipo) values (16, 'Philips 18,5" LED HD VGA Widescreen 193V5LSB2', 4);
-insert into Produto (codigo, nome, tipo) values (17, 'AOC LED 185 Widescreen VGA E970SWNL', 4);
+/* monitors */
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    13, 'LG LED 238 Widescreen Full HD IPS HDMI 24MK430H', 4);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    14, 'Dell de 21.5” P2219H (somente painel) - 210-arxl - 210-arxl', 4);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    15, 'LG 19,5" Led - 20M37Aa', 4);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    16, 'Philips 18,5" LED HD VGA Widescreen 193V5LSB2', 4);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    17, 'AOC LED 185 Widescreen VGA E970SWNL', 4);
 
-/* audio */
-insert into Produto (codigo, nome, tipo) values (18, 'ALTO-FALANTES LOGITECH Z120 - a7271767 - a7271767', 5);
-insert into Produto (codigo, nome, tipo) values (19, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Preta SP 301BK', 5);
-insert into Produto (codigo, nome, tipo) values (20, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Branca SP 301WH', 5);
+/* audio devices */
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    18, 'ALTO-FALANTES LOGITECH Z120 - a7271767 - a7271767', 5);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    19, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Preta SP 301BK', 5);
+INSERT INTO Produto (codigo, nome, tipo) VALUES (
+    20, 'Caixa de Som C3 Tech 20 Portátil 3W RMS Branca SP 301WH', 5);
 
 /* 10 Técnicos */
-insert into Tecnico (codigo, nome) values (1, 'Maria Angélica');
-insert into Tecnico (codigo, nome) values (2, 'César Munari');
-insert into Tecnico (codigo, nome) values (3, 'Jefferson Blaitt');
-insert into Tecnico (codigo, nome) values (4, 'Carolina Camargo');
-insert into Tecnico (codigo, nome) values (5, 'Tadeu Maffeis');
-insert into Tecnico (codigo, nome) values (6, 'Dimas Cardoso');
-insert into Tecnico (codigo, nome) values (7, 'Sérgio Bernardo');
-insert into Tecnico (codigo, nome) values (8, 'Fernando Miranda');
-insert into Tecnico (codigo, nome) values (9, 'Paulo Edson Alves');
-insert into Tecnico (codigo, nome) values (10, 'Tony Stark');
+INSERT INTO Tecnico (codigo, nome) VALUES (1, 'Maria Angélica');
+INSERT INTO Tecnico (codigo, nome) VALUES (2, 'César Munari');
+INSERT INTO Tecnico (codigo, nome) VALUES (3, 'Jefferson Blaitt');
+INSERT INTO Tecnico (codigo, nome) VALUES (4, 'Carolina Camargo');
+INSERT INTO Tecnico (codigo, nome) VALUES (5, 'Tadeu Maffeis');
+INSERT INTO Tecnico (codigo, nome) VALUES (6, 'Dimas Cardoso');
+INSERT INTO Tecnico (codigo, nome) VALUES (7, 'Sérgio Bernardo');
+INSERT INTO Tecnico (codigo, nome) VALUES (8, 'Fernando Miranda');
+INSERT INTO Tecnico (codigo, nome) VALUES (9, 'Paulo Edson Alves');
+INSERT INTO Tecnico (codigo, nome) VALUES (10, 'Tony Stark');
 
-/* Categoria */
-insert into Categoria (codigo, descricao, precohora) values (1, 'Software', 30.0);
-insert into Categoria (codigo, descricao, precohora) values (2, 'Hardware', 20.0);
+/* Categorias */
+INSERT INTO Categoria (codigo, descricao, precohora) VALUES (1, 'Software', 30.0);
+INSERT INTO Categoria (codigo, descricao, precohora) VALUES (2, 'Hardware', 20.0);
 
 /* 128 Solicitações */
 @@ insert_solicitacoes;

@@ -1,7 +1,3 @@
-/*
-4.5 Listar todas as ocorrências  das solicitações não atendidas.
-*/
-
 SELECT
     Ocorrencia.codigo,
     Ocorrencia.dia,

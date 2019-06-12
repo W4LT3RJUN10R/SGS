@@ -1,5 +1,5 @@
 /*
-6- Escreva um trigger que, ao incluir-se uma ocorrência, se já houver mais de 3 ocorrências da mesma solicitação, grava em uma tabela de log a mensagem "Situação Grave – grande número de ocorrências <cod_solicitacao> <nome_cliente> <qtde>".
+    6) Escreva um trigger que, ao incluir-se uma ocorrência, se já houver mais de 3 ocorrências da mesma solicitação, grava em uma tabela de log a mensagem "Situação Grave – grande número de ocorrências <cod_solicitacao> <nome_cliente> <qtde>".
 */
 
 /* Criar tabela de logs */
@@ -33,9 +33,9 @@ END MuitasOcorrencias;
 /*
     A solicitação 71 tem apenas uma ocorrência. Incluir mais uma não deve acionar o trigger. PASSANDO
 */
-insert into Ocorrencia
+INSERT INTO Ocorrencia
 (codigo, solicitacao, tecnico, dia, descricao, duracao)
-values
+VALUES
 (514, 71, 8, '1/11/2018', 'abc', 1);
 SELECT * FROM Log;
 
@@ -43,42 +43,42 @@ SELECT * FROM Log;
     A solicitação 6 tem 3 ocorrências. Incluir uma 4ª não deve acionar o trigger, mas incluir uma 5ª deve. 
 */
 /* +1 PASSANDO */
-insert into Ocorrencia
+INSERT INTO Ocorrencia
 (codigo, solicitacao, tecnico, dia, descricao, duracao)
-values
+VALUES
 (515, 6, 10, '1/11/2018', 'abc', 1);
 SELECT * FROM Log;
 
 /* +2 PASSANDO */
-insert into Ocorrencia
+INSERT INTO Ocorrencia
 (codigo, solicitacao, tecnico, dia, descricao, duracao)
-values
+VALUES
 (516, 6, 10, '1/11/2018', 'abc', 1);
 SELECT * FROM Log;
 
 /*
     A solicitação 52 tem 4 ocorrências. Incluir mais uma deve acionar o trigger. PASSANDO
 */
-insert into Ocorrencia
+INSERT INTO Ocorrencia
 (codigo, solicitacao, tecnico, dia, descricao, duracao)
-values
+VALUES
 (517, 52, 10, '1/11/2018', 'abc', 1);
 SELECT * FROM Log;
 
 /*
     A solicitação 64 tem 5 ocorrências. Incluir mais uma deve acionar o trigger. PASSANDO
 */
-insert into Ocorrencia
+INSERT INTO Ocorrencia
 (codigo, solicitacao, tecnico, dia, descricao, duracao)
-values
+VALUES
 (518, 64, 10, '1/11/2018', 'abc', 1);
 SELECT * FROM Log;
 
 /*
     A solicitação 50 tem 7 ocorrências. Incluir mais uma deve acionar o trigger. PASSANDO
 */
-insert into Ocorrencia
+INSERT INTO Ocorrencia
 (codigo, solicitacao, tecnico, dia, descricao, duracao)
-values
+VALUES
 (519, 50, 10, '1/11/2018', 'abc', 1);
 SELECT * FROM Log;

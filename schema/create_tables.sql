@@ -1,45 +1,45 @@
-create table Tipo ( /* do produto */
-    codigo number(5, 0), /* PK */
-    descricao varchar2(32)
+CREATE TABLE Tipo ( /* do produto */
+    codigo NUMBER(5, 0), /* PK */
+    descricao VARCHAR2(32)
 );
 
-create table Produto (
-    codigo number(5, 0), /* PK */
-    nome varchar2(128),
-    tipo number(5, 0) /* FK para Tipo.codigo */
+CREATE TABLE Produto (
+    codigo NUMBER(5, 0), /* PK */
+    nome VARCHAR2(128),
+    tipo NUMBER(5, 0) /* FK para Tipo.codigo */
 );
 
-create table Cliente (
-    codigo number(5, 0), /* PK */
-    nome varchar2(128)
+CREATE TABLE Cliente (
+    codigo NUMBER(5, 0), /* PK */
+    nome VARCHAR2(128)
 );
 
-create table Tecnico (
-    codigo number(5, 0), /* PK */
-    nome varchar2(128)
+CREATE TABLE Tecnico (
+    codigo NUMBER(5, 0), /* PK */
+    nome VARCHAR2(128)
 );
 
-create table Categoria (
-    codigo number(5, 0), /* PK */
-    descricao varchar2(128),
-    precoHora number(8, 2) /* 999999.99 */
+CREATE TABLE Categoria (
+    codigo NUMBER(5, 0), /* PK */
+    descricao VARCHAR2(128),
+    precoHora NUMBER(8, 2) /* 999999.99 */
 );
 
-create table Ocorrencia (
-    codigo number(5, 0), /* PK */
-    solicitacao number(5, 0), /* FK para Solicitacao.codigo */
-    tecnico number(5, 0), /* FK para Tecnico.codigo */
-    dia date,
-    descricao varchar2(512),
-    duracao number(3)
+CREATE TABLE Ocorrencia (
+    codigo NUMBER(5, 0), /* PK */
+    solicitacao NUMBER(5, 0), /* FK para Solicitacao.codigo */
+    tecnico NUMBER(5, 0), /* FK para Tecnico.codigo */
+    dia DATE,
+    descricao VARCHAR2(512),
+    duracao NUMBER(3)
 );
 
-create table Solicitacao (
-    codigo number(5, 0), /* PK */
-    produto number(5, 0), /* FK para Produto.codigo */
-    categoria number(5, 0), /* FK para Categoria.codigo */
-    cliente number(5, 0), /* FK para Cliente.codigo */
-    dia date,
-    custoTotal number(8, 2), /* 999999.99 */
-    situacao number(1) /* 1 | 2 | 3 = não atendida | aguardando peças | atendida */
+CREATE TABLE Solicitacao (
+    codigo NUMBER(5, 0), /* PK */
+    produto NUMBER(5, 0), /* FK para Produto.codigo */
+    categoria NUMBER(5, 0), /* FK para Categoria.codigo */
+    cliente NUMBER(5, 0), /* FK para Cliente.codigo */
+    dia DATE,
+    custoTotal NUMBER(8, 2), /* 999999.99 */
+    situacao NUMBER(1) /* 1 | 2 | 3 = não atendida | aguardando peças | atendida */
 );
