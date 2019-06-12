@@ -6,9 +6,9 @@
 
 **Alunos**  
 Pedro Bernardo de SOUSA | 0030481711006  
-Weuller Júnior Souza Bessa | 0030481621040  
 Vítor Andrade Marques da Silva | 0030481511040  
 Walter Pereira Mendes Junior | 0030481521040  
+Weuller Júnior Souza Bessa | 0030481621040  
 
 ## Entidades e Relacionamentos
 
