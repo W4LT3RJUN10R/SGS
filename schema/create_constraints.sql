@@ -24,5 +24,3 @@ ALTER TABLE Ocorrencia
     ADD CONSTRAINT pkOcorrencia PRIMARY KEY (codigo)
     ADD CONSTRAINT fkTecnicoOcorrencia FOREIGN KEY (tecnico) REFERENCES Tecnico
     ADD CONSTRAINT fkSolicitacaoOcorrencia FOREIGN KEY (solicitacao) REFERENCES Solicitacao;
-
-

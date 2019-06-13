@@ -1,45 +1,42 @@
-/*
-9- Escreva  uma procedure que receba como parâmetro o código do produto e  verifique, quantas requisições existem (em qq situação) e classifique:
-
-    Se qtde de requisições >= 15 “Produto Ruim – não recomendar”
-    Se qtde de requisições >= 5 e < 15 “Produto a ser verificado”
-    Se qtde de requisições < 5 e > 0 “Produto Bom”
-    Se qtde de requisições = 0 “Produto Excelente – recomendar”
-
-Gravar uma linha na tabela de Mensagem com: codproduto, nomeproduto e a classificação atribuída acima.
-*/
-
-/*
+/* Criar tabela de mensagens */
 CREATE TABLE Mensagem (
     codigo NUMBER(5, 0),
-    produto VARCHAR2(128 BYTE),
+    codproduto NUMBER(5, 0),
+    nomeproduto VARCHAR2(128 BYTE),
     classificacao VARCHAR2(128 BYTE)
 );
 ALTER TABLE Mensagem ADD CONSTRAINT codigo PRIMARY KEY (codigo);
-CREATE SEQUENCE Mensagem START WITH 1;
+CREATE SEQUENCE menSeq START WITH 1;
 
-CREATE OR REPLACE PROCEDURE classificarRequisicao(pCod NUMBER)
+/* Criar PROCEDURE */
+CREATE OR REPLACE PROCEDURE classificarSolicitacao(pCod Produto.codigo%TYPE)
 AS
 total NUMBER;
-nome varchar2(128 BYTE);
+n Produto.nome%TYPE;
 BEGIN
+    SELECT nome INTO n FROM Produto WHERE Produto.codigo = pCod;
+    SELECT COUNT(*) INTO total FROM Solicitacao WHERE Solicitacao.produto = pCod;
+    
+    IF total >= 15 THEN
+        INSERT INTO Mensagem VALUES (menSeq.nextVal, pCod, n, 'Produto Ruim - não recomendar');
+    ELSIF total >=5 AND total < 15 THEN
+        INSERT INTO Mensagem VALUES (menSeq.nextVal, pCod, n, 'Produto a ser verificado');
+    ELSIF total > 0 AND total < 5 THEN
+        INSERT INTO Mensagem VALUES (menSeq.nextVal, pCod, n, 'Produto Bom');
+    ELSIF total = 0 THEN
+        INSERT INTO Mensagem VALUES (menSeq.nextVal, pCod, n, 'Produto Excelente - recomendar');
+    END IF;
 
-    SELECT produto.nome INTO nome FROM produto WHERE produto.codigo = pCod;
-    SELECT COUNT(solicitacao.codigo) INTO total FROM solicitacao WHERE solicitacao.produto = pCod;
+END classificarSolicitacao;
+/
 
-IF total >= 15 THEN
-    INSERT INTO Mensagem VALUES (pCod, nome, 'Produto Ruim - não recomendar');
-    END IF;
-IF total >=5 AND total < 15 THEN
-    INSERT INTO Mensagem VALUES (pCod, nome, 'Produto a ser verificado');
-    END IF;
-IF total > 0 AND total < 5 THEN
-    INSERT INTO Mensagem VALUES (pCod, nome, 'Produto Bom');
-    END IF;
-IF total = 0 THEN
-    INSERT INTO Mensagem VALUES (pCod, nome, 'Produto Excelente - recomendar');
-    END IF;
+/* Executar PROCEDURE para os 10 primeiros produtos */
+BEGIN
+    FOR a IN 1 .. 10 LOOP
+        classificarSolicitacao(a);
+    END LOOP;
 END;
-*/
+/
 
-/*exec classificarrequisicao(8);*/
+/* Ler resultados */
+SELECT * FROM Mensagem;

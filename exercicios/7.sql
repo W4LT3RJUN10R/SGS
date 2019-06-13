@@ -1,7 +1,3 @@
-/*
-    7) Escreva um trigger que ao excluir uma solicitação exclua também as suas ocorrências.
-*/
-
 CREATE OR REPLACE TRIGGER excluirOcorrenciasDependentes
 BEFORE DELETE ON Solicitacao
 FOR EACH ROW

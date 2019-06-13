@@ -1,7 +1,3 @@
-/*
-    6) Escreva um trigger que, ao incluir-se uma ocorrência, se já houver mais de 3 ocorrências da mesma solicitação, grava em uma tabela de log a mensagem "Situação Grave – grande número de ocorrências <cod_solicitacao> <nome_cliente> <qtde>".
-*/
-
 /* Criar tabela de logs */
 CREATE TABLE Log (
     codigo NUMBER(5, 0),
